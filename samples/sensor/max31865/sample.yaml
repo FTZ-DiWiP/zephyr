@@ -1,0 +1,10 @@
+sample:
+  name: MAX31865 temperature sensor
+tests:
+  sample.sensor.max31865:
+    harness: sensor
+    tags: samples sensors
+    depends_on: spi
+    filter: dt_compat_enabled("maxim,max31865")
+    integration_platforms:
+      - particle_xenon
